@@ -51,7 +51,7 @@ class RegisterView: UIView {
             
             imageLabel.widthAnchor.constraint(equalToConstant: 400),
             imageLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 228),
-            imageLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 25),
+            imageLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             imageLabel.leadingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             
             emailTextField.widthAnchor.constraint(equalToConstant: 374),
@@ -71,12 +71,12 @@ class RegisterView: UIView {
             
             buttonRegistrar.widthAnchor.constraint(equalToConstant: 374),
             buttonRegistrar.heightAnchor.constraint(equalToConstant: 60),
-            buttonRegistrar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
-            buttonRegistrar.topAnchor.constraint(equalTo: confirmarSenhaTextField.bottomAnchor, constant: 25),
+            buttonRegistrar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            buttonRegistrar.topAnchor.constraint(equalTo: confirmarSenhaTextField.bottomAnchor, constant: 50),
             
             buttonLogar.widthAnchor.constraint(equalToConstant: 374),
             buttonLogar.heightAnchor.constraint(equalToConstant: 60),
-            buttonLogar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
+            buttonLogar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             buttonLogar.topAnchor.constraint(equalTo: buttonRegistrar.bottomAnchor, constant: 25),
             
             

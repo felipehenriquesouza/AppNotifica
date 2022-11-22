@@ -20,7 +20,7 @@ class LoginView: UIView {
     
     var imageLogin = ImageDefault(image: "ImageLogin")
     
-    var imageLabel = ImageDefault(image: "Registre e gerencie as ocorrências do seu IF")
+    var imageLabel = LabelDefault(label: "Registre e gerencie as ocorrências do seu IF")
     
     var emailTextField = TextDefault(texto: "E-mail")
       
