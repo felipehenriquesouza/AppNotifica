@@ -18,7 +18,7 @@ class RegisterView: UIView {
             setupVisualElements()
         }
     
-    //MARK: - Initialize
+    //MARK: - Closures
     var onLoginTap: (()-> Void)?
     
     
@@ -99,7 +99,7 @@ class RegisterView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    //MARK: -Initialize
+    //MARK: -Actions
     @objc
     private func loginTap() {
         onLoginTap?()

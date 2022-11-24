@@ -10,29 +10,29 @@ import UIKit
 
 class LoginView: UIView {
     //MARK: - Initialize
-        override init(frame: CGRect) {
-            //chama o frame da superclasse
-            super.init(frame: frame)
-            // muda a cor de fundo do app para branco
-            self.backgroundColor = .viewBackGroundColor
-            setupVisualElements()
-        }
+    override init(frame: CGRect) {
+        //chama o frame da superclasse
+        super.init(frame: frame)
+        // muda a cor de fundo do app para branco
+        self.backgroundColor = .viewBackGroundColor
+        setupVisualElements()
+    }
     
     
     
     //MARK: - Closures
     var onRegisterTap: (()-> Void)?
+    var onLoginTap: (()-> Void)?
     
     
     
-    
-   //MARK: - Properties
+    //MARK: - Properties
     var imageLogin = ImageDefault(image: "ImageLogin")
     
     var imageLabel = LabelDefault(label: "Registre e gerencie as ocorrências do seu IF")
     
     var emailTextField = TextDefault(texto: "E-mail")
-      
+    
     var senhaTextField = TextDefault(texto: "Senha")
     
     var buttonLogar = ButtonDefault(botao: "Logar")
@@ -51,8 +51,10 @@ class LoginView: UIView {
         
         buttonRegistrar.addTarget(self, action: #selector(registerTap), for: .touchUpInside)
         
-        NSLayoutConstraint.activate([
+        buttonLogar.addTarget(self, action: #selector(loginTap), for: .touchUpInside)
         
+        NSLayoutConstraint.activate([
+            
             imageLogin.widthAnchor.constraint(equalToConstant: 274.99),
             imageLogin.heightAnchor.constraint(equalToConstant: 82.64),
             imageLogin.topAnchor.constraint(equalTo: self.topAnchor, constant: 228),
@@ -102,8 +104,13 @@ class LoginView: UIView {
     private func registerTap() {
         onRegisterTap?()
     }
+    
+    
+    @objc
+    private func loginTap() {
+        onLoginTap?()
+    }
 }
-
 
 
 
