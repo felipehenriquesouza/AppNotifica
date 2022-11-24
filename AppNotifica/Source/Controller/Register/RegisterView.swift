@@ -18,6 +18,14 @@ class RegisterView: UIView {
             setupVisualElements()
         }
     
+    //MARK: - Initialize
+    var onLoginTap: (()-> Void)?
+    
+    
+    
+    
+    //MARK: - Properties
+    
    
     
     var imageLabel = LabelDefault(label: "Entre com seu e-mail e senha para se registrar")
@@ -44,7 +52,7 @@ class RegisterView: UIView {
         self.addSubview(buttonRegistrar)
         self.addSubview(buttonLogar)
         
-        
+        buttonLogar.addTarget(self, action: #selector(loginTap), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
         
@@ -91,5 +99,11 @@ class RegisterView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    //MARK: -Initialize
+    @objc
+    private func loginTap() {
+        onLoginTap?()
+    }
     
+        
 }
