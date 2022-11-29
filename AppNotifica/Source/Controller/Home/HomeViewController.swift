@@ -2,17 +2,21 @@
 //  HomeViewController.swift
 //  AppNotifica
 //
-//  Created by IFB BIOTIC 17 on 24/11/22.
+//  Created by Dario Pintor on 21/10/22.
 //
+
 import Foundation
 import UIKit
 
-class HomeViewController: ViewControlerDefault {
-    //MARK: - Closures
+class HomeViewController: ViewControllerDefault {
     
-    //cria uma variável que é do tipo LoginView
+    //MARK: -  Clouseres
+    
+    //cria uma variável que é do
+    
     lazy var homeView: HomeView = {
         let homeView = HomeView()
+        
         
         return homeView
     }()
@@ -25,8 +29,7 @@ class HomeViewController: ViewControlerDefault {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Home"
-      
-        
     }
     
 }
+

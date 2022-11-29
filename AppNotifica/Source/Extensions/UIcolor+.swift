@@ -2,34 +2,33 @@
 //  UIcolor+.swift
 //  AppNotifica
 //
-//  Created by IFB BIOTIC 17 on 17/11/22.
+//  Created by Dario Pintor on 19/10/22.
 //
 
 import Foundation
 import UIKit
 
 extension UIColor {
-    
     static var viewBackGroundColor: UIColor {
-        UIColor(named: "viewBackGroundColor") ??
-            .white
+        UIColor(named: "viewBackGroundColor") ?? .white
     }
-    static var textColor: UIColor {
-        UIColor(named: "textColor") ??
-            .white
+    static var textLabelColor: UIColor {
+        UIColor(named: "textLabelColor") ?? .lightGray
     }
-    static var buttonColor: UIColor {
-        UIColor(named: "buttonColor") ??
-            .white
+    
+    static var buttonBackGroundColor: UIColor {
+        UIColor(named: "buttonBackGroundColor") ?? .green
     }
+    
+    static var textFieldBackGroundColor: UIColor {
+        UIColor(named: "textFieldBackGroundColor") ?? .white
+    }
+    
+    static var placeHolderColor: UIColor {
+        UIColor(named: "placeHolderColor") ?? .white
+    }
+    
+    
+    
     
 }
-
-
-
-
-
-
-
-
-

@@ -2,9 +2,12 @@
 //  HomeCoordinator.swift
 //  AppNotifica
 //
-//  Created by IFB BIOTIC 17 on 24/11/22.
+//  Created by Dario Pintor on 21/10/22.
 //
+
+
 import Foundation
+
 import UIKit
 class HomeCoordinator: Coordinator {
     
@@ -14,20 +17,15 @@ class HomeCoordinator: Coordinator {
         let viewController = HomeViewController()
         return viewController
     }()
-    //cria um construtor para incializar meu navationCrontroller
-    init (navigationController: UINavigationController ) {
+    init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        
     }
     
     func start() {
-        // inicializa o homeviewcontroller
+        //inicializa  o homeviewcontrollher
         let viewController = HomeViewController()
         self.navigationController.pushViewController(viewController, animated: true)
         
+        
     }
-    
-}
-
-
-
+    }

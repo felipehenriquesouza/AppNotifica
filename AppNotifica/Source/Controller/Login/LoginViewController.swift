@@ -8,26 +8,26 @@
 import Foundation
 import UIKit
 
-class LoginViewController: ViewControlerDefault {
-    //MARK: - Closures
+class LoginViewController: ViewControllerDefault {
     
-    var onRegisterTap: (()->Void)?
-    var onLoginTap: (()->Void)?
+    //MARK: -  Clouseres
+    var onRegisterTap: (() -> Void)?
+    var onLoginTap: (() -> Void)?
     
-    //cria uma variável que é do tipo LoginView
+    //cria uma variável que é do
+    
     lazy var loginView: LoginView = {
         let loginView = LoginView()
         loginView.onRegisterTap = {
             self.onRegisterTap?()
         }
+        
         loginView.onLoginTap = {
             self.onLoginTap?()
         }
+        
         return loginView
     }()
-
-    
-    
     
        override func loadView(){
            self.view = loginView
@@ -36,11 +36,9 @@ class LoginViewController: ViewControlerDefault {
     // é executado quando está carregando
        override func viewDidLoad() {
            super.viewDidLoad()
-            self.title = "Logar"
-           
+        self.title = "Logar"
     
+
        }
 
 }
-
-

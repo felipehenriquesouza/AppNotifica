@@ -2,30 +2,29 @@
 //  RegisterViewController.swift
 //  AppNotifica
 //
-//  Created by IFB BIOTIC 17 on 22/11/22.
+//  Created by Dario Pintor on 20/10/22.
 //
+
+import Foundation
 
 import Foundation
 import UIKit
 
-class RegisterViewController: ViewControlerDefault {
-    
-    //MARK: - Initialize
-    var onLoginTap: (()-> Void)?
-    
-    
-    
-    
+class RegisterViewController: ViewControllerDefault {
+   
+    //MARK: -  Clouseres
+    var onLoginTap: (() -> Void)?
     
     //cria uma variável que é do tipo LoginView
     lazy var registerView: RegisterView = {
-         let registerView = RegisterView()
-        
-        registerView.onLoginTap = {
-            self.onLoginTap?()
-        }
-        return registerView
-    }()
+        let registerView = RegisterView()
+         registerView.onLoginTap = {
+           self.onLoginTap?()
+       }
+       return registerView
+       
+    } ()
+    
     
        override func loadView(){
            self.view = registerView
@@ -34,8 +33,8 @@ class RegisterViewController: ViewControlerDefault {
     // é executado quando está carregando
        override func viewDidLoad() {
            super.viewDidLoad()
-            self.title = "Registrar"
-           
+        self.title = "Registrar"
+
        }
 
 }

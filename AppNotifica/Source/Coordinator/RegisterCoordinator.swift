@@ -2,8 +2,11 @@
 //  RegisterCoordinator.swift
 //  AppNotifica
 //
-//  Created by IFB BIOTIC 17 on 22/11/22.
+//  Created by Dario Pintor on 20/10/22.
 //
+
+import Foundation
+
 
 import Foundation
 import UIKit
@@ -22,13 +25,18 @@ class RegisterCoordinator: Coordinator {
       func start() {
         let viewController = RegisterViewController()
             self.navigationController.pushViewController(viewController, animated: true)
-          viewController.onLoginTap={
+          
+          
+          viewController.onLoginTap = {
               self.gotoLogin()
           }
+
     }
     
-    func gotoLogin() {
-        self.navigationController.popViewController(animated: true)
+    //função que chama a registerView
+    func  gotoLogin() {
         
+        
+        self.navigationController.popViewController(animated: true)
     }
 }
