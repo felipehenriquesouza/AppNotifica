@@ -14,6 +14,9 @@ class NovaOcorrenciaView: ViewDefault {
     
     //MARK: - CLOSURES
     
+    var onCameraTap: (()-> Void)?
+    
+    
     //MARK: - PROPERTIES
     
     lazy var imagem: UIImageView = {
@@ -21,6 +24,9 @@ class NovaOcorrenciaView: ViewDefault {
         let view = UIImageView ()
         view.image = UIImage(named: "imagemCamera")
          
+        let tapGR = UITapGestureRecognizer(target: self, action: #selector(cameraTap))
+        view.addGestureRecognizer(tapGR)
+        view.isUserInteractionEnabled = true
         
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -51,9 +57,6 @@ class NovaOcorrenciaView: ViewDefault {
         self.addSubview(localizationTextField)
         self.addSubview(statusTextField)
         self.addSubview(saveButton)
-        
-        
-        
         
         
         
@@ -103,5 +106,13 @@ class NovaOcorrenciaView: ViewDefault {
         
         
     }
+    @objc
     
+    private func cameraTap () {
+        self.onCameraTap?()
+    }
+    
+    func setImage(image:UIImage){
+        imagem.image = image
+    }
 }
