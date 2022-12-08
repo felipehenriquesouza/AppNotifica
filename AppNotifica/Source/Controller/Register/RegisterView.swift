@@ -31,7 +31,7 @@ class RegisterView: ViewDefault {
     
     //cria a função com as propriadades da text no login
     var confirmaSenhaTextField: TextFieldDefault = {
-        let text = TextFieldDefault (placeholder: "Confirme sua senha", keyBoardType: .emailAddress, returnKeyType: .done)
+        let text = TextFieldDefault (placeholder: "Confirmar senha", keyBoardType: .emailAddress, returnKeyType: .done)
         
         text.isSecureTextEntry = true
         text.textContentType = .oneTimeCode
